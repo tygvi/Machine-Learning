@@ -1,0 +1,8 @@
+import numpy as np
+rolls=np.random.randint(1,7,size=10000)
+average=np.mean(rolls)
+print("Average Roll=",average)
+counts = np.bincount(rolls)[1:]
+print(counts)
+probabilities = counts / len(rolls)
+print(probabilities)
