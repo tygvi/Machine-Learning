@@ -1,0 +1,12 @@
+import numpy as np
+n=int(input())
+toss=np.random.randint(1,3,size=n)
+average=np.average(toss)
+print("The Average is",average)
+counts = np.bincount(toss)
+print("Frequency of Heads:", counts[1])
+print("Frequency of Tails:", counts[2])
+HeadsP=counts[1]/len(toss)
+TailsP=counts[2]/len(toss)
+print("Probability of Heads:", HeadsP)
+print("Probability of Tails:", TailsP)
